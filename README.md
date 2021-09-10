@@ -17,6 +17,8 @@
 ### 4. Tải tool về
 - Các bạn tải **[tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/main/Support%20to%20create%20DST%20dedicated%20server.zip)** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
 ![ToolDedi](https://user-images.githubusercontent.com/48979664/132851588-594004d4-e41b-4fd0-a814-7faf88382b78.png)
+- Nếu bạn không nhớ save game của mình ở cluster mấy thì vào phần host game và rê con chuột lại biểu tượng thư mục của host đó
+![Thu Muc Cluster](https://user-images.githubusercontent.com/48979664/132852931-a00c1ef4-fa39-412c-9162-2d4bf034ea4e.png)
 - Nếu sửa thông tin server bên phải thì bạn nhớ nhấn nút Save nhé :3 
 - Xong thì ấn Create, tool sẽ copy mod và tạo file .bat. Tới đây sẽ có file tên MyDedicatedServer ngoài Destop, khi cần mở server bạn chỉ cần chạy nó lên là được.
 Chúc các bạn thành công :v
