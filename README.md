@@ -17,7 +17,9 @@
 ### 4. Tải tool về
 - Các bạn tải **[tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/main/Support%20to%20create%20DST%20dedicated%20server.zip)** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
 ![ToolDedi](https://user-images.githubusercontent.com/48979664/132851588-594004d4-e41b-4fd0-a814-7faf88382b78.png)
-('Select steamapp' bạn nhớ chọn đúng chỗ lưu game Don't starve together và Don't Starve Together Dedicated Server nhé)
+(1)'Select steamapp' bạn nhớ chọn đúng chỗ chứa game Don't starve together và Don't Starve Together Dedicated Server nhé
+(2) Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới
+(3) Là token đã tạo ở bước 3
 - Nếu bạn không nhớ save game của mình ở cluster mấy thì vào phần host game và rê con chuột lại biểu tượng thư mục của host đó
 ![Thu Muc Cluster](https://user-images.githubusercontent.com/48979664/132852931-a00c1ef4-fa39-412c-9162-2d4bf034ea4e.png)
 - Nếu sửa thông tin server bên phải thì bạn nhớ nhấn nút Save nhé :3 
