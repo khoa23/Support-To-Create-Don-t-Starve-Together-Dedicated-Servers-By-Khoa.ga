@@ -32,4 +32,5 @@ Chúc các bạn thành công :v
 #### Thêm/bớt mod cho server thế nào?
 - Bạn bật lại host đó trong game rồi thêm/bớt mod xong thì ấn Resume world như bình thường, rồi thoát ra thôi.
 
-### Liên hệ [facebook](https://www.facebook.com/www.khoa.ga) của mình nếu có thắc mắc
+### Liên hệ [facebook](https://www.facebook.com/www.khoa.ga) của mình nếu có thắc mắc.
+Vì mình lười bắt lỗi nên có lỗi gì mọi người cứ chụp gửi qua facebook để mình fix nhé <3
