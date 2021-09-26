@@ -31,6 +31,8 @@ Chúc các bạn thành công :v
 - Bạn hãy kiểm tra Don't Starve Together Dedicated Server ở Steam có update không nhé.
 #### Thêm/bớt mod cho server thế nào?
 - Bạn bật lại host đó trong game rồi thêm/bớt mod xong thì ấn Resume world như bình thường, rồi thoát ra thôi.
+#### Cập nhật mod ở Dedicated server thế nào?
+- Bạn update mod trong game rồi làm lại hết :))
 
 ### 📫 Liên hệ [facebook](https://www.facebook.com/www.khoa.ga) của mình nếu có thắc mắc.
 Vì mình lười bắt lỗi nên sẽ có 'n' lỗi, mọi người cứ chụp gửi qua facebook để mình fix nhé 💞️
