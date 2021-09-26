@@ -33,6 +33,9 @@ Chúc các bạn thành công :v
 - Bạn bật lại host đó trong game rồi thêm/bớt mod xong thì ấn Resume world như bình thường, rồi thoát ra thôi.
 #### Cập nhật mod ở Dedicated server thế nào?
 - Bạn update mod trong game rồi làm lại hết :))
+#### Thêm admin vào host?
+- [Bình luận của Akio](https://steamcommunity.com/app/322330/discussions/0/521643320346586412/)
+- Tạo file adminlist.txt trong documents/klei/don't starve together/file lưu game, rồi bạn bỏ ID của người muốn trao quyền admin vào (VD: KU_ad39dik), không phải steam id nhé. Lấy Klei User ID ở https://accounts.klei.com/account/info
 
 ### 📫 Liên hệ [facebook](https://www.facebook.com/www.khoa.ga) của mình nếu có thắc mắc.
 Vì mình lười bắt lỗi nên sẽ có 'n' lỗi, mọi người cứ chụp gửi qua facebook để mình fix nhé 💞️
