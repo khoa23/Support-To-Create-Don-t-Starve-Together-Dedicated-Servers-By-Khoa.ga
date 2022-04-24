@@ -2,6 +2,7 @@
 ## Hướng dẫn tạo Server Dedicated của game Don't starve together bằng tool hỗ trợ của Khoa
 (Yêu cầu hệ điều hành Windows và đã tải Don't Starve Together Dedicated Server trên Steam)
 ### 1. Tại Library -> TOOLS, tải về Don't Starve Together Dedicated Server.
+Lưu ý: để cùng ổ đĩa với game Don't starve together
 ![DSTDedicatedServerSteam](https://user-images.githubusercontent.com/48979664/132850417-6d782686-4fd7-4f4d-902d-761b707dd11e.png)
 ### 2. Tạo World và bật Mods
 - Vào game tạo 1 host. Chỉnh world, add caves, enabled mod, chọn chế độ... tất tần tật sau đó vào game rồi thoát ra.
