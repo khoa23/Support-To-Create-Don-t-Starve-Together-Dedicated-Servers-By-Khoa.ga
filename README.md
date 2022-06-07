@@ -6,7 +6,7 @@ Lưu ý: để cùng ổ đĩa với game Don't starve together
 ![DSTDedicatedServerSteam](https://user-images.githubusercontent.com/48979664/132850417-6d782686-4fd7-4f4d-902d-761b707dd11e.png)
 ### 2. Tạo World và bật Mods
 - Vào game tạo 1 host. Chỉnh world, add caves, enabled mod, chọn chế độ... tất tần tật sau đó vào game rồi thoát ra. Nhớ chọn 'Save Type: Local Save' nhé.
-[20220607195204_1](https://user-images.githubusercontent.com/48979664/172384055-deb92249-65b4-4992-ae6a-75b63e0dc7d5.jpg)
+![20220607195204_1](https://user-images.githubusercontent.com/48979664/172384055-deb92249-65b4-4992-ae6a-75b63e0dc7d5.jpg)
 ### 3. Lấy và chỉnh sửa Token
 - Tại màn hình game ấn vào “Account” 
 ![DSTManHinhChinh](https://user-images.githubusercontent.com/48979664/132851064-e2a71ad9-fcb0-490f-a8d5-59c6e71ce84b.png)
