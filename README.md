@@ -6,7 +6,7 @@ Lưu ý: để cùng ổ đĩa với game Don't starve together
 ![DSTDedicatedServerSteam](https://user-images.githubusercontent.com/48979664/132850417-6d782686-4fd7-4f4d-902d-761b707dd11e.png)
 ### 2. Tạo World và bật Mods
 - Vào game tạo 1 host. Chỉnh world, add caves, enabled mod, chọn chế độ... tất tần tật sau đó vào game rồi thoát ra. Nhớ chọn 'Save Type: Local Save' nhé.
-![DSTTaoWorld](https://user-images.githubusercontent.com/48979664/132850564-3ed2aac7-54ab-4322-9999-e9436ffa71ab.png)
+[20220607195204_1](https://user-images.githubusercontent.com/48979664/172384055-deb92249-65b4-4992-ae6a-75b63e0dc7d5.jpg)
 ### 3. Lấy và chỉnh sửa Token
 - Tại màn hình game ấn vào “Account” 
 ![DSTManHinhChinh](https://user-images.githubusercontent.com/48979664/132851064-e2a71ad9-fcb0-490f-a8d5-59c6e71ce84b.png)
@@ -18,7 +18,7 @@ Lưu ý: để cùng ổ đĩa với game Don't starve together
 ### 4. Tải tool về
 - Các bạn tải **[tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/main/Support%20to%20create%20DST%20dedicated%20server.zip)** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
 ![ToolDedi](https://user-images.githubusercontent.com/48979664/132851588-594004d4-e41b-4fd0-a814-7faf88382b78.png)
-Nếu mở lên mà nó yêu cầu .NET 5.0 thì bạn tải **[bản .NET 5.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-5.0.11-windows-x64-installer)** này nhé</br>
+Nếu mở lên mà nó yêu cầu .NET 5.0 thì bạn tải **[bản .NET 5.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-5.0.11-windows-x64-installer)** này nhé</br>!
 (1)'Select steamapp' bạn nhớ chọn đúng chỗ chứa game Don't starve together và Don't Starve Together Dedicated Server nhé</br>
 (2) Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới</br>
 (3) Là token đã tạo ở bước 3</br>
