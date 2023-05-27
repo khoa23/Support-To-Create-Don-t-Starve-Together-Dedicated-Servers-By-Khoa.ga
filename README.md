@@ -23,7 +23,10 @@ Nếu mở lên mà nó yêu cầu .NET 5.0 thì bạn tải **[bản .NET 5.0 D
 (2) Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới</br>
 (3) Là token đã tạo ở bước 3</br>
 - Nếu bạn không nhớ save game của mình ở cluster mấy thì vào phần host game và rê con chuột lại biểu tượng thư mục của host đó
-![Thu Muc Cluster](https://user-images.githubusercontent.com/48979664/132852931-a00c1ef4-fa39-412c-9162-2d4bf034ea4e.png)
+![Tim Thu Muc Cluster](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/48979664/caf2e7dc-046b-4f8c-8288-727b0bdb572b)
+![Tim Thu Muc Cluster 2](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/48979664/c3b7a27e-fede-466a-9c37-1819f33bc8ab)
+
+
 - Nếu sửa thông tin server bên phải thì bạn nhớ nhấn nút Save nhé :3 
 - Xong thì ấn Create, tool sẽ copy mod và tạo file .bat. Tới đây sẽ có file tên MyDedicatedServer ngoài Destop, khi cần mở server bạn chỉ cần chạy nó lên là được.
 Chúc các bạn thành công :v
@@ -37,7 +40,7 @@ Chúc các bạn thành công :v
 - Bạn update mod trong game rồi làm lại hết :))
 #### Thêm admin vào host?
 - [Bình luận của Akio](https://steamcommunity.com/app/322330/discussions/0/521643320346586412/)
-- Tạo file adminlist.txt trong documents/klei/don't starve together/file lưu game, rồi bạn bỏ ID của người muốn trao quyền admin vào (VD: KU_ad39dik), không phải steam id nhé. Lấy Klei User ID ở https://accounts.klei.com/account/info
+- Tạo file adminlist.txt trong documents/klei/don't starve together/folder lưu game (Nếu biết folder lưu game ở đâu thì xem bước 4), rồi bạn bỏ ID của người muốn trao quyền admin vào (VD: KU_ad39dik), không phải steam id nhé. Lấy Klei User ID ở https://accounts.klei.com/account/info
 
 ### 📫 Liên hệ [facebook](https://www.facebook.com/www.khoa.ga) của mình nếu có thắc mắc.
 Vì mình lười bắt lỗi nên sẽ có 'n' lỗi, mọi người cứ chụp gửi qua facebook để mình fix nhé 💞️
