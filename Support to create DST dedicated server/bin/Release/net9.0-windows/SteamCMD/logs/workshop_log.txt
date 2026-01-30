@@ -1,0 +1,309 @@
+
+
+[2026-01-30 13:34:08] Client version: 1769026246
+[2026-01-30 13:34:08] Loading workshop items for 0 installed apps for user [a:1:2569612534]:
+[2026-01-30 13:34:12] Loading workshop items for 0 installed apps for user [a:1:2569612534]:
+[2026-01-30 13:34:13] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (0 installed, 0 needed)
+[2026-01-30 13:34:13] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 13:34:13] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 13:34:13] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1806920400, new manifest 931843385365843153
+[2026-01-30 13:34:16] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 13:34:16] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:34:16] [AppID 322330] Updating workshop item details failed with Failure
+
+
+[2026-01-30 13:34:19] Client version: 1769026246
+[2026-01-30 13:34:19] Loading workshop items for 0 installed apps for user [a:1:3711131877]:
+[2026-01-30 13:34:20] Loading workshop items for 0 installed apps for user [a:1:3711131877]:
+[2026-01-30 13:34:21] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (1 installed, 1 needed)
+[2026-01-30 13:34:21] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 13:34:21] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 13:34:21] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1852257480, new manifest 5587473510968465200
+[2026-01-30 13:34:23] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 13:34:23] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:34:23] [AppID 322330] Updating workshop item details failed with Failure
+
+
+[2026-01-30 13:34:27] Client version: 1769026246
+[2026-01-30 13:34:27] Loading workshop items for 0 installed apps for user [a:1:4125769765]:
+[2026-01-30 13:34:28] Loading workshop items for 0 installed apps for user [a:1:4125769765]:
+[2026-01-30 13:34:29] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (2 installed, 2 needed)
+[2026-01-30 13:34:29] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 13:34:30] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 13:34:30] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3546208045, new manifest 3058713560892048543
+[2026-01-30 13:34:32] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 13:34:32] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:34:32] [AppID 322330] Updating workshop item details failed with Failure
+
+
+[2026-01-30 13:34:36] Client version: 1769026246
+[2026-01-30 13:34:36] Loading workshop items for 0 installed apps for user [a:1:2110548023]:
+[2026-01-30 13:34:37] Loading workshop items for 0 installed apps for user [a:1:2110548023]:
+[2026-01-30 13:34:38] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (3 installed, 3 needed)
+[2026-01-30 13:34:38] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 13:34:38] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 13:34:38] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3556247959, new manifest 6763921056361325490
+[2026-01-30 13:34:41] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 13:34:41] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:34:41] [AppID 322330] Updating workshop item details failed with Failure
+
+
+[2026-01-30 13:34:44] Client version: 1769026246
+[2026-01-30 13:34:44] Loading workshop items for 0 installed apps for user [a:1:2508065849]:
+[2026-01-30 13:34:45] Loading workshop items for 0 installed apps for user [a:1:2508065849]:
+[2026-01-30 13:34:46] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (4 installed, 4 needed)
+[2026-01-30 13:34:46] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 13:34:46] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 13:34:46] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3571706033, new manifest 1752022863722297263
+[2026-01-30 13:34:49] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 13:34:49] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:34:49] [AppID 322330] Updating workshop item details failed with Failure
+
+
+[2026-01-30 13:37:15] Client version: 1769026246
+[2026-01-30 13:37:15] Loading workshop items for 0 installed apps for user [a:1:3015008573]:
+[2026-01-30 13:37:16] Loading workshop items for 0 installed apps for user [a:1:3015008573]:
+[2026-01-30 13:37:17] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (5 installed, 5 needed)
+[2026-01-30 13:37:17] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 13:37:17] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 13:37:17] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 13:37:17] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:37:18] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 13:37:18] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 13:37:18] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 13:37:18] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 13:37:18] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:37:19] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 13:37:19] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 13:37:20] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 13:37:20] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:37:21] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 13:37:21] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 13:37:21] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 13:37:21] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:37:22] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 13:37:22] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 13:37:22] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 13:37:22] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:37:23] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 13:37:24] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 13:37:24] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1803285852, new manifest 916134722684705003
+[2026-01-30 13:37:26] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 13:37:26] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 13:41:45] Client version: 1769026246
+[2026-01-30 13:41:45] Loading workshop items for 0 installed apps for user [a:1:2646306140]:
+[2026-01-30 13:41:46] Loading workshop items for 0 installed apps for user [a:1:2646306140]:
+[2026-01-30 13:41:47] [AppID 322330] Loaded workshop items in "c:\program files (x86)\steam\steamapps\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 13:41:47] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 13:41:47] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 13:41:47] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 13:41:47] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:41:48] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 13:41:49] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 13:41:49] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 13:41:49] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 13:41:49] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:41:50] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 13:41:50] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 13:41:51] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 13:41:51] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:41:52] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 13:41:52] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 13:41:52] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 13:41:52] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:41:54] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 13:41:54] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 13:41:54] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 13:41:54] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:41:55] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 13:41:55] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 13:41:56] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 13:41:56] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 13:44:37] Client version: 1769026246
+[2026-01-30 13:44:37] Loading workshop items for 0 installed apps for user [a:1:2881879113]:
+[2026-01-30 13:44:39] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (0 installed, 0 needed)
+[2026-01-30 13:44:39] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 13:44:39] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 13:44:39] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1806920400, new manifest 931843385365843153
+[2026-01-30 13:44:41] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 13:44:41] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:44:41] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 13:44:42] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 13:44:42] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 13:44:42] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1852257480, new manifest 5587473510968465200
+[2026-01-30 13:44:42] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 13:44:42] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:44:43] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 13:44:44] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 13:44:44] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3546208045, new manifest 3058713560892048543
+[2026-01-30 13:44:44] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 13:44:44] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:44:45] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 13:44:45] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 13:44:45] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3556247959, new manifest 6763921056361325490
+[2026-01-30 13:44:46] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 13:44:46] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:44:47] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 13:44:47] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 13:44:47] [AppID 322330] Detected workshop change (latest from server) : changed cached item 3571706033, new manifest 1752022863722297263
+[2026-01-30 13:44:48] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 13:44:48] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 13:44:49] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 13:44:49] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 13:44:49] [AppID 322330] Detected workshop change (latest from server) : changed cached item 1803285852, new manifest 916134722684705003
+[2026-01-30 13:44:49] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 13:44:49] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 14:07:01] Client version: 1769026246
+[2026-01-30 14:07:01] Loading workshop items for 0 installed apps for user [a:1:3800186892]:
+[2026-01-30 14:07:03] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 14:07:03] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 14:07:03] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 14:07:03] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 14:07:03] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:07:04] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 14:07:04] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 14:07:04] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 14:07:05] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 14:07:05] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:07:06] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 14:07:06] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 14:07:06] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 14:07:06] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:07:07] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 14:07:07] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 14:07:08] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 14:07:08] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:07:08] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 14:07:08] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 14:07:09] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 14:07:09] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:07:10] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 14:07:10] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 14:07:10] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 14:07:10] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 14:21:54] Client version: 1769026246
+[2026-01-30 14:21:54] Loading workshop items for 0 installed apps for user [a:1:17321166]:
+[2026-01-30 14:21:57] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 14:21:57] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 14:21:57] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 14:21:57] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 14:21:57] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:21:58] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 14:21:59] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 14:21:59] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 14:21:59] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 14:21:59] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:22:00] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 14:22:00] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 14:22:01] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 14:22:01] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:22:02] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 14:22:02] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 14:22:02] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 14:22:02] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:22:03] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 14:22:03] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 14:22:04] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 14:22:04] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:22:05] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 14:22:05] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 14:22:05] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 14:22:05] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 14:27:47] Client version: 1769026246
+[2026-01-30 14:27:47] Loading workshop items for 0 installed apps for user [a:1:3549616465]:
+[2026-01-30 14:27:50] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 14:27:50] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 14:27:50] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 14:27:50] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 14:27:50] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:27:51] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 14:27:51] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 14:27:51] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 14:27:51] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 14:27:51] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:27:53] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 14:27:53] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 14:27:53] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 14:27:53] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:27:54] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 14:27:54] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 14:27:55] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 14:27:55] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:27:56] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 14:27:56] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 14:27:56] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 14:27:56] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:27:57] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 14:27:57] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 14:27:58] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 14:27:58] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 14:47:31] Client version: 1769026246
+[2026-01-30 14:47:31] Loading workshop items for 0 installed apps for user [a:1:918585502]:
+[2026-01-30 14:47:33] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 14:47:33] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 14:47:33] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 14:47:33] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 14:47:33] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:47:34] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 14:47:34] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 14:47:34] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 14:47:34] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 14:47:34] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:47:35] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 14:47:35] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 14:47:36] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 14:47:36] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:47:37] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 14:47:37] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 14:47:37] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 14:47:37] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:47:38] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 14:47:38] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 14:47:39] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 14:47:39] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:47:40] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 14:47:40] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 14:47:40] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 14:47:40] [AppID 322330] Finished Workshop download job : No Error
+
+
+[2026-01-30 14:48:58] Client version: 1769026246
+[2026-01-30 14:48:58] Loading workshop items for 0 installed apps for user [a:1:22811814]:
+[2026-01-30 14:49:00] [AppID 322330] Loaded workshop items in "D:\Code\Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga\Support to create DST dedicated server\bin\Release\net9.0-windows\SteamCMD\steamapps\workshop" (6 installed, 6 needed)
+[2026-01-30 14:49:00] [AppID 322330] Download item 1806920400 requested by app
+[2026-01-30 14:49:01] [AppID 322330] Starting Workshop download job (requested item 1806920400 )
+[2026-01-30 14:49:01] [AppID 322330] Download item 1806920400 result : OK
+[2026-01-30 14:49:01] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:49:02] [AppID 322330] Updating workshop item details failed with Access Denied
+[2026-01-30 14:49:02] [AppID 322330] Download item 1852257480 requested by app
+[2026-01-30 14:49:02] [AppID 322330] Starting Workshop download job (requested item 1852257480 )
+[2026-01-30 14:49:02] [AppID 322330] Download item 1852257480 result : OK
+[2026-01-30 14:49:02] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:49:03] [AppID 322330] Download item 3546208045 requested by app
+[2026-01-30 14:49:03] [AppID 322330] Starting Workshop download job (requested item 3546208045 )
+[2026-01-30 14:49:04] [AppID 322330] Download item 3546208045 result : OK
+[2026-01-30 14:49:04] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:49:05] [AppID 322330] Download item 3556247959 requested by app
+[2026-01-30 14:49:05] [AppID 322330] Starting Workshop download job (requested item 3556247959 )
+[2026-01-30 14:49:05] [AppID 322330] Download item 3556247959 result : OK
+[2026-01-30 14:49:05] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:49:07] [AppID 322330] Download item 3571706033 requested by app
+[2026-01-30 14:49:07] [AppID 322330] Starting Workshop download job (requested item 3571706033 )
+[2026-01-30 14:49:07] [AppID 322330] Download item 3571706033 result : OK
+[2026-01-30 14:49:07] [AppID 322330] Finished Workshop download job : No Error
+[2026-01-30 14:49:08] [AppID 322330] Download item 1803285852 requested by app
+[2026-01-30 14:49:08] [AppID 322330] Starting Workshop download job (requested item 1803285852 )
+[2026-01-30 14:49:09] [AppID 322330] Download item 1803285852 result : OK
+[2026-01-30 14:49:09] [AppID 322330] Finished Workshop download job : No Error

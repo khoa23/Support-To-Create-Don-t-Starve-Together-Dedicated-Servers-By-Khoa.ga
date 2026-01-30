@@ -11,6 +11,8 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Diagnostics;
 using Microsoft.Win32;
+using System.IO.Compression;
+using System.Net;
 
 namespace Support_to_create_DST_dedicated_server
 {
@@ -21,6 +23,7 @@ namespace Support_to_create_DST_dedicated_server
         String path_cluster = "";// 440725477\Cluster_1
         String folderSteamApp = "";
         String folderSteamAppDST = ""; // Thư mục steamapps chứa game DST (có thể khác ổ với Dedicated Server)
+        List<string> allLibraryPaths = new List<string>(); // Danh sách tất cả các library steamapps tìm thấy
         String listMods = "";
         String hostNameA = "";
         String descriptionA = "";
@@ -57,6 +60,9 @@ namespace Support_to_create_DST_dedicated_server
                             libraryPaths.Add(appsPath);
                     }
                 }
+
+                // Lưu lại toàn bộ list để tìm mod sau này
+                allLibraryPaths = libraryPaths;
 
                 // 1. Tìm thư mục chứa Dedicated Server (Ưu tiên số 1)
                 foreach (string path in libraryPaths)
@@ -201,20 +207,28 @@ namespace Support_to_create_DST_dedicated_server
             string pathModoverrride = path_cluster_full + "\\Master\\modoverrides.lua";
             string fileModOverride = System.IO.File.ReadAllText(pathModoverrride);
 
-            //get list mod //["workshop-374550642;workshop-374550642"]
-            string wk = "[\"workshop-";
-            var output = String.Join(";", Regex.Matches(fileModOverride, @"\"+wk+"(.+?)\"]")
-                                    .Cast<Match>()
-                                    .Select(m => m.Groups[1].Value));
-            listMods = output;
+            // 2. Trích xuất danh sách ID Mod (Regex chính xác hơn)
+            var matches = Regex.Matches(fileModOverride, @"\[['""]workshop-(?<id>\d+)['""]\]");
+            var ids = matches.Cast<Match>().Select(m => m.Groups["id"].Value).Distinct().ToList();
+            listMods = string.Join(";", ids);
 
-            //copy mod
-            lbStatus.Text = "Copying mod";
-            copyMod();
+            if (ids.Count == 0)
+            {
+                MessageBox.Show("No mods found in modoverrides.lua!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //create .bat file
-            lbStatus.Text = "Creating .bat file";
-            createBatFile();
+
+            // 3. Copy & Download mods (Chạy đa luồng)
+            Task.Run(() => {
+                copyMod();
+
+                // 2. Sau khi xong mới tạo file .bat
+                this.Invoke((MethodInvoker)delegate {
+                    lbStatus.Text = "Creating .bat file";
+                    createBatFile();
+                });
+            });
         }
 
         private void btnCheckUpdate_Click(object sender, EventArgs e)
@@ -236,23 +250,27 @@ namespace Support_to_create_DST_dedicated_server
             }
 
             string fileModOverride = File.ReadAllText(pathModoverrride);
-            string wk = "[\"workshop-";
-            var output = String.Join(";", Regex.Matches(fileModOverride, @"\" + wk + "(.+?)\"]")
-                                    .Cast<Match>()
-                                    .Select(m => m.Groups[1].Value));
-            listMods = output;
+            var matches = Regex.Matches(fileModOverride, @"\[['""]workshop-(?<id>\d+)['""]\]");
+            var ids = matches.Cast<Match>().Select(m => m.Groups["id"].Value).Distinct().ToList();
+            listMods = string.Join(";", ids);
 
-            if (string.IsNullOrEmpty(listMods))
+            if (ids.Count == 0)
             {
                 MessageBox.Show("No workshop mods found in modoverrides.lua", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            // 2. Chạy hàm copyMod (hàm này đã có logic so sánh LastWriteTime)
-            copyMod();
             
-            lbStatus.Text = "Mod check & update complete!";
-            MessageBox.Show("Mod check & update process finished.\nQuá trình kiểm tra và cập nhật mod hoàn tất.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            lbStatus.Invoke((MethodInvoker)delegate { lbStatus.Text = $"Detected {ids.Count} mods. Starting process..."; });
+
+            // 2. Chạy hàm copyMod (Chạy đa luồng ngầm)
+            Task.Run(() => {
+                copyMod();
+                this.Invoke((MethodInvoker)delegate {
+                    lbStatus.Text = "Mod check & update complete!";
+                    MessageBox.Show("Mod check & update process finished.\nQuá trình kiểm tra và cập nhật mod hoàn tất.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                });
+            });
         }
 
         private bool CheckVersion()
@@ -316,85 +334,200 @@ namespace Support_to_create_DST_dedicated_server
         }
         private void copyMod()
         {
-            // folderSteamApp bây giờ là nơi chứa Dedicated Server
-            // folderSteamAppDST là nơi chứa game DST (có thể ở ổ đĩa khác)
-            string folderModsDST = Path.Combine(folderSteamAppDST, "common", "Don't Starve Together", "mods");
-            string folderModWorkshop = Path.Combine(folderSteamAppDST, "workshop", "content", "322330");
             string folderModsDediDST = Path.Combine(folderSteamApp, "common", "Don't Starve Together Dedicated Server", "mods");
+            string rootApp = AppDomain.CurrentDomain.BaseDirectory;
+            string steamCmdDir = Path.Combine(rootApp, "SteamCMD");
 
-            if (!Directory.Exists(folderModsDediDST))
+            // 1. Chuẩn bị môi trường
+            try
             {
-                try { Directory.CreateDirectory(folderModsDediDST); } catch { }
+                if (!Directory.Exists(folderModsDediDST)) Directory.CreateDirectory(folderModsDediDST);
+                // Tạo sẵn folder download trong SteamCMD để ổn định
+                string steamCmdContentDir = Path.Combine(steamCmdDir, "steamapps", "workshop", "content", "322330");
+                if (!Directory.Exists(steamCmdContentDir)) Directory.CreateDirectory(steamCmdContentDir);
             }
+            catch { }
 
             string[] split = listMods.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (string s in split)
-            {
-                string modId = s.Trim();
-                if (string.IsNullOrEmpty(modId)) continue;
+            int totalMods = split.Length;
+            int processedCount = 0;
+            List<string> modsToDownload = new List<string>();
+            
+            // Danh sách thư mục tìm kiếm (Bổ sung thêm chính thư mục Dedi nếu có mod cũ)
+            List<string> searchPaths = new List<string>(allLibraryPaths);
+            if (!searchPaths.Contains(folderSteamApp)) searchPaths.Add(folderSteamApp);
 
+            // 2. ĐA LUỒNG: Quét và Copy mod cục bộ
+            Parallel.ForEach(split, (modId) =>
+            {
+                modId = modId.Trim();
                 string sourcePath = "";
                 string targetPath = Path.Combine(folderModsDediDST, "workshop-" + modId);
 
-                // 1. Tìm trong thư mục Workshop Content (Ưu tiên vì đây là nơi Steam tải mặc định)
-                string workshopPath = Path.Combine(folderModWorkshop, modId);
-                if (Directory.Exists(workshopPath))
+                foreach (string libraryPath in searchPaths)
                 {
-                    sourcePath = workshopPath;
-                }
-                // 2. Tìm trong thư mục mods của game DST (nếu có cài game)
-                else
-                {
-                    string dstModPath = Path.Combine(folderModsDST, "workshop-" + modId);
-                    if (Directory.Exists(dstModPath))
-                    {
-                        sourcePath = dstModPath;
-                    }
+                    // Kiểm tra ở folder game mods
+                    string dstModPath = Path.Combine(libraryPath, "common", "Don't Starve Together", "mods", "workshop-" + modId);
+                    if (Directory.Exists(dstModPath)) { sourcePath = dstModPath; break; }
+
+                    // Kiểm tra ở folder workshop content
+                    string workshopContentPath = Path.Combine(libraryPath, "workshop", "content", "322330", modId);
+                    if (Directory.Exists(workshopContentPath)) { sourcePath = workshopContentPath; break; }
                 }
 
                 if (!string.IsNullOrEmpty(sourcePath))
                 {
                     try
                     {
-                        // Kiểm tra xem có bản cập nhật mới không
                         if (Directory.Exists(targetPath))
                         {
-                            DateTime sourceTime = GetLastWriteTimeRecursive(sourcePath);
-                            DateTime targetTime = GetLastWriteTimeRecursive(targetPath);
-
-                            if (sourceTime > targetTime)
+                            if (GetLastWriteTimeRecursive(sourcePath) <= GetLastWriteTimeRecursive(targetPath)) 
                             {
-                                lbStatus.Text = $"Updating mod {modId}...";
+                                System.Threading.Interlocked.Increment(ref processedCount);
+                                return; 
                             }
                         }
-
                         Copy(sourcePath, targetPath);
+                        System.Threading.Interlocked.Increment(ref processedCount);
+                        this.Invoke((MethodInvoker)delegate { lbStatus.Text = $"[{processedCount}/{totalMods}] Copied {modId}"; });
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error copying mod {modId}: {ex.Message}", "Error / Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    catch { }
                 }
                 else
                 {
-                    // Nếu không tìm thấy ở đâu cả
-                    string msg = $"Mod workshop-{modId} was not found on your computer.\n" +
-                                 $"Mod workshop-{modId} không tìm thấy trên máy tính.\n\n" +
-                                 "Do you want to open Steam Workshop to download it?\n" +
-                                 "Bạn có muốn mở Steam Workshop để tải mod này không?";
-                    
-                    DialogResult result = MessageBox.Show(msg, "Mod Missing / Thiếu Mod", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    lock (modsToDownload) { modsToDownload.Add(modId); }
+                }
+            });
+
+            // 3. TẢI NGAY (Batch Mode): Tải toàn bộ mod thiếu và copy ngay
+            if (modsToDownload.Count > 0)
+            {
+                this.Invoke((MethodInvoker)delegate { lbStatus.Text = $"Downloading {modsToDownload.Count} missing mods..."; });
+                if (DownloadModsBatchWithSteamCMD(modsToDownload))
+                {
+                    foreach (var modId in modsToDownload)
                     {
-                        string url = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + modId;
-                        try
+                        string downloadedPath = Path.Combine(steamCmdDir, "steamapps", "workshop", "content", "322330", modId);
+                        string targetPath = Path.Combine(folderModsDediDST, "workshop-" + modId);
+                        if (Directory.Exists(downloadedPath))
                         {
-                            Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
+                            try 
+                            { 
+                                Copy(downloadedPath, targetPath); 
+                                System.Threading.Interlocked.Increment(ref processedCount);
+                                this.Invoke((MethodInvoker)delegate { lbStatus.Text = $"[{processedCount}/{totalMods}] Downloaded {modId}"; });
+                            } catch { }
                         }
-                        catch { }
                     }
                 }
+            } 
+
+            this.Invoke((MethodInvoker)delegate { lbStatus.Text = "Mods logic bypassed. Server will handle via setup file."; });
+            UpdateDedicatedServerModsSetup(split);
+        }
+
+        private bool DownloadModsBatchWithSteamCMD(List<string> modIds)
+        {
+            try
+            {
+                string rootApp = AppDomain.CurrentDomain.BaseDirectory;
+                string steamCmdDir = Path.Combine(rootApp, "SteamCMD");
+                string steamCmdExe = Path.Combine(steamCmdDir, "steamcmd.exe");
+
+                if (!File.Exists(steamCmdExe))
+                {
+                    this.Invoke((MethodInvoker)delegate { lbStatus.Text = "Installing SteamCMD tool..."; });
+                    if (!Directory.Exists(steamCmdDir)) Directory.CreateDirectory(steamCmdDir);
+                    string zipPath = Path.Combine(steamCmdDir, "steamcmd.zip");
+                    using (WebClient wc = new WebClient()) { wc.DownloadFile("https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip", zipPath); }
+                    ZipFile.ExtractToDirectory(zipPath, steamCmdDir);
+                    File.Delete(zipPath);
+                }
+
+                // Lệnh Batch tải mod (Ép tải vào thư mục SteamCMD để dễ quản lý)
+                StringBuilder args = new StringBuilder();
+                args.Append("+login anonymous ");
+                foreach (var id in modIds)
+                {
+                    args.Append($"+workshop_download_item 322330 {id} ");
+                }
+                args.Append("+quit");
+
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = steamCmdExe,
+                    Arguments = args.ToString(),
+                    WorkingDirectory = steamCmdDir, // Quan trọng: Chạy ngay tại folder SteamCMD
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    WindowStyle = ProcessWindowStyle.Hidden
+                };
+
+                using (Process process = Process.Start(startInfo))
+                {
+                    process.WaitForExit();
+                    return true; // Trả về true để tiến hành copy các mod đã tải được
+                }
             }
+            catch { return false; }
+        }
+
+        private void UpdateDedicatedServerModsSetup(string[] modIds)
+        {
+            try
+            {
+                string folderModsDediDST = Path.Combine(folderSteamApp, "common", "Don't Starve Together Dedicated Server", "mods");
+                if (!Directory.Exists(folderModsDediDST)) return;
+
+                string setupFilePath = Path.Combine(folderModsDediDST, "dedicated_server_mods_setup.lua");
+                
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("-- Auto-generated by Support Tool by Khoa.ga");
+                sb.AppendLine("-- IMPORTANT: We ONLY add mods if they are NOT in the local mods folder.");
+                sb.AppendLine("-- This prevents the Dedicated Server from deleting your copied/downloaded mods.");
+                
+                foreach (string id in modIds)
+                {
+                    if (string.IsNullOrWhiteSpace(id)) continue;
+
+                    // Nếu mod đã tồn tại trong folder mods -> KHÔNG ghi vào file setup
+                    // Server sẽ load nó như một "Local mod", tránh bị xóa sạch folder.
+                    string modPath = Path.Combine(folderModsDediDST, "workshop-" + id);
+                    if (!Directory.Exists(modPath))
+                    {
+                        sb.AppendLine($"ServerModSetup(\"{id}\")");
+                    }
+                }
+                
+                File.WriteAllText(setupFilePath, sb.ToString());
+            }
+            catch (Exception ex)
+            {
+                this.Invoke((MethodInvoker)delegate { lbStatus.Text = "Error updating setup file"; });
+            }
+        }
+
+        private void ExportModLinksToDesktop()
+        {
+            try
+            {
+                string[] split = listMods.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                if (split.Length == 0) return;
+
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string filePath = Path.Combine(desktopPath, "Link_Mod_DST.txt");
+
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < split.Length; i++)
+                {
+                    sb.AppendLine($"{i + 1}. https://steamcommunity.com/sharedfiles/filedetails/?id={split[i].Trim()}");
+                }
+
+                File.WriteAllText(filePath, sb.ToString());
+                MessageBox.Show("Exported Link_Mod_DST.txt to Desktop!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+            }
+            catch { }
         }
         private DateTime GetLastWriteTimeRecursive(string path)
         {
@@ -447,35 +580,57 @@ namespace Support_to_create_DST_dedicated_server
         }
         private void createBatFile()
         {
-            string nameBat = "MyDedicatedServer";
             string bin64Path = Path.Combine(folderSteamApp, "common", "Don't Starve Together Dedicated Server", "bin64");
-            string batPath = Path.Combine(bin64Path, nameBat + ".bat");
-
-            // Đảm bảo thư mục bin64 tồn tại (tránh lỗi nếu user chưa bao giờ chạy server)
             if (!Directory.Exists(bin64Path))
             {
                 try { Directory.CreateDirectory(bin64Path); } catch { }
             }
 
-            if (!System.IO.File.Exists(batPath))
-            {
-                System.IO.File.Create(batPath).Dispose();
-                TextWriter tw = new StreamWriter(batPath);
-                tw.WriteLine("cd /D \"%~dp0\"\nstart \"DST Server Master\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster " + path_cluster + " -shard Master \nstart \"DST Server Caves\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster " + path_cluster + " -shard Caves");
-                tw.Close();
-                CreateShortcut(nameBat);
-                lbStatus.Text = "Done!!! Check " + nameBat + ".bat shortcut in your desktop";
-            }
-            else if (System.IO.File.Exists(batPath))
-            {
-                System.IO.File.Delete(batPath);
-                using (var tw = new StreamWriter(batPath, true))
-                {
-                    tw.WriteLine("cd /D \"%~dp0\"\nstart \"DST Server Master\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster " + path_cluster + " -shard Master \nstart \"DST Server Caves\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster " + path_cluster + " -shard Caves");
-                    CreateShortcut(nameBat);
-                    lbStatus.Text = "Done!!! Check " + nameBat + ".bat shortcut in your Desktop";
-                }
-            }
+            string serverName = txtServerName.Text.Trim();
+            if (string.IsNullOrEmpty(serverName)) serverName = "Khoa.ga's World";
+
+            string fileName = "MyDedicatedServer";
+            string batPath = Path.Combine(bin64Path, fileName + ".bat");
+
+            // Format cluster path for BAT file (giữ nguyên gạch chéo ngược như snippet của bạn)
+            string localPathCluster = path_cluster;
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("chcp 65001");
+            sb.AppendLine("IF \"%JUSTTERMINATE%\" NEQ \"OKAY\" SET \"JUSTTERMINATE=OKAY\" & CALL %0 %* <NUL & SET \"JUSTTERMINATE=\" & GOTO :eof");
+            sb.AppendLine("");
+            sb.AppendLine(":: Chế độ Launcher: Tự động bật 2 cửa sổ Master và Caves");
+            sb.AppendLine("if \"%1\"==\"master\" goto master_shard");
+            sb.AppendLine("if \"%1\"==\"caves\" goto caves_shard");
+            sb.AppendLine("");
+            sb.AppendLine($"start \"Launcher_{serverName}\" \"%~f0\" master");
+            sb.AppendLine($"start \"Launcher_{serverName}\" \"%~f0\" caves");
+            sb.AppendLine("exit");
+            sb.AppendLine("");
+            sb.AppendLine(":master_shard");
+            sb.AppendLine($"Title MT_Lock_Master_{serverName}");
+            sb.AppendLine(":loop_master");
+            sb.AppendLine($"start \"Server_Master_{serverName}\" /D \"%~dp0\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster \"{localPathCluster}\" -shard Master");
+            sb.AppendLine(":: Sau 2 phut (120 giay) thi cua so MT_Lock nay tu dong dong lai");
+            sb.AppendLine("choice /t 120 /d y > nul");
+            sb.AppendLine("exit");
+            sb.AppendLine("");
+            sb.AppendLine(":caves_shard");
+            sb.AppendLine($"Title MT_Lock_Caves_{serverName}");
+            sb.AppendLine(":loop_caves");
+            sb.AppendLine($"start \"Server_Caves_{serverName}\" /D \"%~dp0\" dontstarve_dedicated_server_nullrenderer_x64.exe -cluster \"{localPathCluster}\" -shard Caves");
+            sb.AppendLine(":: Sau 2 phut (120 giay) thi cua so MT_Lock nay tu dong dong lai");
+            sb.AppendLine("choice /t 120 /d y > nul");
+            sb.AppendLine("exit");
+
+            File.WriteAllText(batPath, sb.ToString(), new UTF8Encoding(false));
+            CreateShortcut(fileName);
+
+            this.Invoke((MethodInvoker)delegate { 
+                lbStatus.Text = "Done!!! BAT file created."; 
+                MessageBox.Show("MyDedicatedServer.bat has been created using your requested structure!\n" +
+                                "File khởi chạy đã được tạo!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            });
         }
 
         private void btnSave_Click(object sender, EventArgs e)
