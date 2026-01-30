@@ -36,7 +36,7 @@ Chúc các bạn thành công :v
 #### Thêm/bớt mod cho server thế nào?
 - Bạn bật lại host đó trong game rồi thêm/bớt mod xong thì ấn Resume world như bình thường, rồi thoát ra thôi.
 #### Cập nhật mod ở Dedicated server thế nào?
-- Bạn update mod trong game rồi làm lại hết :))
+- Bạn mở tool lên, chọn folder Cluster chứa save game, ấn Check Update Mods, tool sẽ kiểm tra version và cập nhật lại mod.
 #### Thêm admin vào host?
 - [Bình luận của Akio](https://steamcommunity.com/app/322330/discussions/0/521643320346586412/)
 - Tạo file adminlist.txt trong documents/klei/don't starve together/folder lưu game (Nếu biết folder lưu game ở đâu thì xem bước 4), rồi bạn bỏ ID của người muốn trao quyền admin vào (VD: KU_ad39dik), không phải steam id nhé. Lấy Klei User ID ở https://accounts.klei.com/account/info
