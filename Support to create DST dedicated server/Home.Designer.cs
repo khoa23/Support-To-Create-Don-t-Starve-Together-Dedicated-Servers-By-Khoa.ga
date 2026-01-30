@@ -54,6 +54,7 @@ namespace Support_to_create_DST_dedicated_server
             this.btnInfo = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnCheckUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +87,17 @@ namespace Support_to_create_DST_dedicated_server
             this.btnRun.Text = "Create";
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // btnCheckUpdate
+            // 
+            this.btnCheckUpdate.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCheckUpdate.Location = new System.Drawing.Point(535, 265);
+            this.btnCheckUpdate.Name = "btnCheckUpdate";
+            this.btnCheckUpdate.Size = new System.Drawing.Size(156, 46);
+            this.btnCheckUpdate.TabIndex = 29;
+            this.btnCheckUpdate.Text = "Check & Update Mods";
+            this.btnCheckUpdate.UseVisualStyleBackColor = false;
+            this.btnCheckUpdate.Click += new System.EventHandler(this.btnCheckUpdate_Click);
             // 
             // txtToken
             // 
@@ -294,6 +306,7 @@ namespace Support_to_create_DST_dedicated_server
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 340);
+            this.Controls.Add(this.btnCheckUpdate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnInfo);
@@ -345,6 +358,7 @@ namespace Support_to_create_DST_dedicated_server
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnCheckUpdate;
     }
 }
 

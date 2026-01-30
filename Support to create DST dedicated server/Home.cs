@@ -217,6 +217,44 @@ namespace Support_to_create_DST_dedicated_server
             createBatFile();
         }
 
+        private void btnCheckUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(path_cluster_full))
+            {
+                MessageBox.Show("Please select Cluster folder first!\nVui lòng chọn thư mục Cluster trước!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            lbStatus.Text = "Checking mods...";
+            
+            // 1. Đọc list mod từ cluster
+            string pathModoverrride = Path.Combine(path_cluster_full, "Master", "modoverrides.lua");
+            if (!File.Exists(pathModoverrride))
+            {
+                MessageBox.Show("modoverrides.lua not found in Master folder!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string fileModOverride = File.ReadAllText(pathModoverrride);
+            string wk = "[\"workshop-";
+            var output = String.Join(";", Regex.Matches(fileModOverride, @"\" + wk + "(.+?)\"]")
+                                    .Cast<Match>()
+                                    .Select(m => m.Groups[1].Value));
+            listMods = output;
+
+            if (string.IsNullOrEmpty(listMods))
+            {
+                MessageBox.Show("No workshop mods found in modoverrides.lua", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // 2. Chạy hàm copyMod (hàm này đã có logic so sánh LastWriteTime)
+            copyMod();
+            
+            lbStatus.Text = "Mod check & update complete!";
+            MessageBox.Show("Mod check & update process finished.\nQuá trình kiểm tra và cập nhật mod hoàn tất.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private bool CheckVersion()
         {
             try
@@ -318,6 +356,18 @@ namespace Support_to_create_DST_dedicated_server
                 {
                     try
                     {
+                        // Kiểm tra xem có bản cập nhật mới không
+                        if (Directory.Exists(targetPath))
+                        {
+                            DateTime sourceTime = GetLastWriteTimeRecursive(sourcePath);
+                            DateTime targetTime = GetLastWriteTimeRecursive(targetPath);
+
+                            if (sourceTime > targetTime)
+                            {
+                                lbStatus.Text = $"Updating mod {modId}...";
+                            }
+                        }
+
                         Copy(sourcePath, targetPath);
                     }
                     catch (Exception ex)
@@ -346,6 +396,22 @@ namespace Support_to_create_DST_dedicated_server
                 }
             }
         }
+        private DateTime GetLastWriteTimeRecursive(string path)
+        {
+            DateTime lastWriteTime = Directory.GetLastWriteTime(path);
+            try
+            {
+                foreach (string file in Directory.GetFiles(path, "*.*", SearchOption.AllDirectories))
+                {
+                    DateTime fileWriteTime = File.GetLastWriteTime(file);
+                    if (fileWriteTime > lastWriteTime)
+                        lastWriteTime = fileWriteTime;
+                }
+            }
+            catch { }
+            return lastWriteTime;
+        }
+
         private void CreateShortcut(string name)
         {
             try

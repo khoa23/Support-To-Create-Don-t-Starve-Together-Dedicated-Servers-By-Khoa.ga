@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Support to create DST dedicated server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+19f59f1b49fe818ec8d59da4a6a58c8200e724ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+00c6c93103ddded0a026c68f514c97053d5c6d93")]
 [assembly: System.Reflection.AssemblyProductAttribute("Support to create DST dedicated server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Support to create DST dedicated server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]
