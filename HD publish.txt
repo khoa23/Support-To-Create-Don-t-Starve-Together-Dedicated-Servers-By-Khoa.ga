@@ -1,0 +1,14 @@
+Sử dụng Visual Studio (Giao diện)
+Nếu bạn dùng Visual Studio, hãy làm theo các bước sau:
+
+Chuột phải vào Project (Support to create DST dedicated server) trong cửa sổ Solution Explorer.
+Chọn Publish...
+Chọn Folder -> Folder -> Nhấn Finish.
+Tại màn hình Publish, nhấn vào biểu tượng cái bút (chỉnh sửa) bên cạnh Deployment Mode hoặc nút Show all settings.
+Cấu hình như sau:
+Deployment Mode: Chọn Self-contained.
+Target Runtime: Chọn win-x64 (hoặc win-x86).
+Mở phần File Publish Options, tích vào:
+Produce single file (Để tạo ra 1 file exe duy nhất).
+Include native libraries for self-extraction.
+Nhấn Save và sau đó nhấn nút Publish.
