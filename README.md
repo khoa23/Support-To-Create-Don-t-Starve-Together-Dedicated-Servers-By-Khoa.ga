@@ -18,8 +18,7 @@ Lưu ý: để cùng ổ đĩa với game Don't starve together
 ### 4. Tải tool về
 - Các bạn tải **[tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/main/Support%20to%20create%20DST%20dedicated%20server.zip)** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
 ![ToolDedi](https://user-images.githubusercontent.com/48979664/132851588-594004d4-e41b-4fd0-a814-7faf88382b78.png)
-Nếu mở lên mà nó yêu cầu .NET 5.0 thì bạn tải **[bản .NET 5.0 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-5.0.11-windows-x64-installer)** này nhé</br>!
-(1)'Select steamapp' bạn nhớ chọn đúng chỗ chứa game Don't starve together và Don't Starve Together Dedicated Server nhé</br>
+(1)'Select steamapp' Mặc định sẽ chọn đường dẫn folder DST Dedicated Server bạn tải ở Steam về, nếu chưa đúng thì bạn chọn lại đường dẫn Don't Starve Together Dedicated Server nhé</br>
 (2) Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới</br>
 (3) Là token đã tạo ở bước 3</br>
 - Nếu bạn không nhớ save game của mình ở cluster mấy thì vào phần host game và rê con chuột lại biểu tượng thư mục của host đó
