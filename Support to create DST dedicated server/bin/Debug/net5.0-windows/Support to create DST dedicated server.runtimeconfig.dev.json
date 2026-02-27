@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\hodan\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\hodan\\.nuget\\packages"
-    ]
-  }
-}

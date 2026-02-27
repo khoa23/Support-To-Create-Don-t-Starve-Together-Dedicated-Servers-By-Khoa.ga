@@ -1,0 +1,13 @@
+# Visual Studio / .NET
+.vs/
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+
+# SteamCMD Logs and Cache
+**/SteamCMD/logs/
+**/SteamCMD/appcache/
+**/SteamCMD/depotcache/
+*.vdf

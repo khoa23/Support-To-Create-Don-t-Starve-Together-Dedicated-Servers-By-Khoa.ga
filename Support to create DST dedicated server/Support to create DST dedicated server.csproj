@@ -6,6 +6,7 @@
     <RootNamespace>Support_to_create_DST_dedicated_server</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Version>1.1.0</Version>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
 
 

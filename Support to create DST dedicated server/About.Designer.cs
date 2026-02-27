@@ -1,17 +1,12 @@
-﻿
+﻿using System.Drawing;
+using System.Windows.Forms;
+
 namespace Support_to_create_DST_dedicated_server
 {
     partial class About
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,128 +18,156 @@ namespace Support_to_create_DST_dedicated_server
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
-            groupBox1 = new System.Windows.Forms.GroupBox();
-            llbSteamKhoa = new System.Windows.Forms.LinkLabel();
-            llbFacebookKhoa = new System.Windows.Forms.LinkLabel();
-            label3 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            btnClose = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            groupBox1.SuspendLayout();
+            lblAppName = new Label();
+            lblVersion = new Label();
+            btnClose = new Button();
+            panelCard = new Panel();
+            btnSteam = new Button();
+            btnFacebook = new Button();
+            lblAuthor = new Label();
+            lblDevBy = new Label();
+            panelCard.SuspendLayout();
             SuspendLayout();
             // 
-            // groupBox1
+            // lblAppName
             // 
-            groupBox1.Controls.Add(llbSteamKhoa);
-            groupBox1.Controls.Add(llbFacebookKhoa);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Location = new System.Drawing.Point(64, 89);
-            groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            groupBox1.Size = new System.Drawing.Size(545, 168);
-            groupBox1.TabIndex = 7;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Contributors";
+            lblAppName.Font = new Font("Segoe UI Variable Display", 14F, FontStyle.Bold);
+            lblAppName.ForeColor = Color.White;
+            lblAppName.Location = new Point(20, 20);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(460, 60);
+            lblAppName.TabIndex = 0;
+            lblAppName.Text = "Don't Starve Together\r\nDedicated Server Dashboard";
+            lblAppName.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // llbSteamKhoa
+            // lblVersion
             // 
-            llbSteamKhoa.AutoSize = true;
-            llbSteamKhoa.Location = new System.Drawing.Point(135, 32);
-            llbSteamKhoa.Name = "llbSteamKhoa";
-            llbSteamKhoa.Size = new System.Drawing.Size(40, 15);
-            llbSteamKhoa.TabIndex = 2;
-            llbSteamKhoa.TabStop = true;
-            llbSteamKhoa.Text = "Steam";
-            llbSteamKhoa.LinkClicked += llbSteamKhoa_LinkClicked;
-            // 
-            // llbFacebookKhoa
-            // 
-            llbFacebookKhoa.AutoSize = true;
-            llbFacebookKhoa.Location = new System.Drawing.Point(66, 32);
-            llbFacebookKhoa.Name = "llbFacebookKhoa";
-            llbFacebookKhoa.Size = new System.Drawing.Size(58, 15);
-            llbFacebookKhoa.TabIndex = 1;
-            llbFacebookKhoa.TabStop = true;
-            llbFacebookKhoa.Text = "Facebook";
-            llbFacebookKhoa.LinkClicked += llbFacebookKhoa_LinkClicked;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
-            label3.Location = new System.Drawing.Point(16, 32);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(43, 17);
-            label3.TabIndex = 0;
-            label3.Text = "Khoa";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(294, 55);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(73, 15);
-            label2.TabIndex = 6;
-            label2.Text = "Version: 1.2";
+            lblVersion.AutoSize = true;
+            lblVersion.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblVersion.ForeColor = Color.FromArgb(148, 163, 184);
+            lblVersion.Location = new Point(215, 85);
+            lblVersion.Name = "lblVersion";
+            lblVersion.Size = new Size(69, 15);
+            lblVersion.TabIndex = 1;
+            lblVersion.Text = "Version";
             // 
             // btnClose
             // 
-            btnClose.Location = new System.Drawing.Point(588, 297);
-            btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnClose.BackColor = Color.FromArgb(51, 65, 85);
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(380, 285);
             btnClose.Name = "btnClose";
-            btnClose.Size = new System.Drawing.Size(82, 22);
-            btnClose.TabIndex = 5;
-            btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Size = new Size(100, 35);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "CLOSE";
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
-            // label1
+            // panelCard
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(64, 19);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(526, 18);
-            label1.TabIndex = 4;
-            label1.Text = "Support to create Don't Starve Together Dedicated Servers For Windows";
+            panelCard.BackColor = Color.FromArgb(30, 41, 59);
+            panelCard.Controls.Add(btnSteam);
+            panelCard.Controls.Add(btnFacebook);
+            panelCard.Controls.Add(lblAuthor);
+            panelCard.Controls.Add(lblDevBy);
+            panelCard.Location = new Point(40, 120);
+            panelCard.Name = "panelCard";
+            panelCard.Size = new Size(420, 140);
+            panelCard.TabIndex = 3;
+            // 
+            // btnSteam
+            // 
+            btnSteam.BackColor = Color.FromArgb(15, 23, 42);
+            btnSteam.Cursor = Cursors.Hand;
+            btnSteam.FlatAppearance.BorderSize = 0;
+            btnSteam.FlatStyle = FlatStyle.Flat;
+            btnSteam.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSteam.ForeColor = Color.FromArgb(56, 189, 248);
+            btnSteam.Location = new Point(220, 80);
+            btnSteam.Name = "btnSteam";
+            btnSteam.Size = new Size(120, 35);
+            btnSteam.TabIndex = 3;
+            btnSteam.Text = "STEAM";
+            btnSteam.UseVisualStyleBackColor = false;
+            btnSteam.Click += llbSteamKhoa_LinkClicked;
+            // 
+            // btnFacebook
+            // 
+            btnFacebook.BackColor = Color.FromArgb(15, 23, 42);
+            btnFacebook.Cursor = Cursors.Hand;
+            btnFacebook.FlatAppearance.BorderSize = 0;
+            btnFacebook.FlatStyle = FlatStyle.Flat;
+            btnFacebook.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnFacebook.ForeColor = Color.FromArgb(59, 130, 246);
+            btnFacebook.Location = new Point(80, 80);
+            btnFacebook.Name = "btnFacebook";
+            btnFacebook.Size = new Size(120, 35);
+            btnFacebook.TabIndex = 2;
+            btnFacebook.Text = "FACEBOOK";
+            btnFacebook.UseVisualStyleBackColor = false;
+            btnFacebook.Click += llbFacebookKhoa_LinkClicked;
+            // 
+            // lblAuthor
+            // 
+            lblAuthor.AutoSize = true;
+            lblAuthor.Font = new Font("Segoe UI Variable Display", 18F, FontStyle.Bold);
+            lblAuthor.ForeColor = Color.White;
+            lblAuthor.Location = new Point(165, 30);
+            lblAuthor.Name = "lblAuthor";
+            lblAuthor.Size = new Size(84, 32);
+            lblAuthor.TabIndex = 1;
+            lblAuthor.Text = "Khoa";
+            // 
+            // lblDevBy
+            // 
+            lblDevBy.AutoSize = true;
+            lblDevBy.Font = new Font("Segoe UI", 9F);
+            lblDevBy.ForeColor = Color.FromArgb(148, 163, 184);
+            lblDevBy.Location = new Point(167, 15);
+            lblDevBy.Name = "lblDevBy";
+            lblDevBy.Size = new Size(82, 15);
+            lblDevBy.TabIndex = 0;
+            lblDevBy.Text = "Developed by";
             // 
             // About
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(700, 338);
-            Controls.Add(groupBox1);
-            Controls.Add(label2);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(15, 23, 42);
+            ClientSize = new Size(500, 340);
+            Controls.Add(panelCard);
             Controls.Add(btnClose);
-            Controls.Add(label1);
-            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Controls.Add(lblVersion);
+            Controls.Add(lblAppName);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "About";
-            Text = "About";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "About Dashboard";
+            panelCard.ResumeLayout(false);
+            panelCard.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel llbSteamKhoa;
-        private System.Windows.Forms.LinkLabel llbFacebookKhoa;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label1;
+        private Label lblAppName;
+        private Label lblVersion;
+        private Button btnClose;
+        private Panel panelCard;
+        private Label lblAuthor;
+        private Label lblDevBy;
+        private Button btnSteam;
+        private Button btnFacebook;
     }
 }
