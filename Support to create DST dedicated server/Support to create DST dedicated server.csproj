@@ -5,9 +5,19 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <RootNamespace>Support_to_create_DST_dedicated_server</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <PackageIcon>DSTVN_new_logo.png</PackageIcon>
+    <FileVersion>1.1.1</FileVersion>
+    <AssemblyVersion>1.1.1</AssemblyVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\hodan\Pictures\Saved Pictures\DSTVN_new_logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 
   <ItemGroup>

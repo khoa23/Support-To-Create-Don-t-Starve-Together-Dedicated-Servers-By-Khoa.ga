@@ -6,8 +6,4 @@
 *.dll
 *.pdb
 
-# SteamCMD Logs and Cache
-**/SteamCMD/logs/
-**/SteamCMD/appcache/
-**/SteamCMD/depotcache/
 *.vdf

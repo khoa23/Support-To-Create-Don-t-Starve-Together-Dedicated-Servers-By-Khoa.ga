@@ -439,7 +439,7 @@ namespace Support_to_create_DST_dedicated_server
             grpMaster.Size = new Size(520, 330);
             grpMaster.TabIndex = 0;
             grpMaster.TabStop = false;
-            grpMaster.Text = "🌍  MASTER SHARD";
+            grpMaster.Text = "🌍  MASTER";
             // 
             // txtLogMaster
             // 
@@ -510,7 +510,7 @@ namespace Support_to_create_DST_dedicated_server
             grpCaves.Size = new Size(530, 330);
             grpCaves.TabIndex = 0;
             grpCaves.TabStop = false;
-            grpCaves.Text = "🕳  CAVES SHARD";
+            grpCaves.Text = "🕳  CAVES";
             // 
             // txtLogCaves
             // 
