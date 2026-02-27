@@ -1,4 +1,4 @@
-
+Tool này tham khảo từ [VOX Launcher](https://github.com/diogo-webber/vox-launcher)
 ## Hướng dẫn tạo Server Dedicated của game Don't starve together bằng tool hỗ trợ của Khoa
 (Yêu cầu hệ điều hành Windows và đã tải game Don't Starve Together trên Steam)
 ### 1. Tại Library, tải về Don't Starve Together.
