@@ -2,8 +2,8 @@
 ## Hướng dẫn tạo Server Dedicated của game Don't starve together bằng tool hỗ trợ của Khoa
 (Yêu cầu hệ điều hành Windows và đã tải game Don't Starve Together trên Steam)
 ### 1. Tại Library, tải về Don't Starve Together.
-![DSTDedicatedServerSteam](https://github.com/user-attachments/assets/e5381355-c07d-421d-8b61-64d10e1b8810.png)
-)
+![DSTDedicatedServerSteam](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/e5381355-c07d-421d-8b61-64d10e1b8810)
+
 ### 2. Tạo World và bật Mods
 - Vào game tạo 1 host. Chỉnh world, add caves, enabled mod, chọn chế độ... tất tần tật sau đó vào game rồi thoát ra. Nhớ chọn 'Save Type: Local Save' nhé.
 ![20220607195204_1](https://user-images.githubusercontent.com/48979664/172384055-deb92249-65b4-4992-ae6a-75b63e0dc7d5.jpg)
@@ -17,8 +17,8 @@
 ![DSTTokenServer](https://user-images.githubusercontent.com/48979664/132851282-82da9a73-0b20-4404-b8b4-b0f9bffc991b.png)
 ### 4. Tải tool về
 - Các bạn tải **([Tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/refs/heads/main/Support%20to%20create%20DST%20dedicated%20server_V1.1.1.zip))** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
-![ToolDedi](https://github.com/user-attachments/assets/c54667bd-6a7e-49e0-9924-1ce5a7e9a0e0.png)
-)
+![ToolDedi](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/c54667bd-6a7e-49e0-9924-1ce5a7e9a0e0)
+
 (1)'BROWSER GAME' Mặc định sẽ chọn đường dẫn folder game DST bạn tải ở Steam về</br>
 (2)'SELECT CLUSTER' Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới</br>
 (3) Là token đã tạo ở bước 3</br>
@@ -29,7 +29,7 @@
 
 - Nếu sửa thông tin server bên phải thì bạn nhớ nhấn nút Save nhé :3 
 - Xong thì ấn LAUNCH SERVER. Tool sẽ chạy server lên.
-  ![ToolDedi](https://github.com/user-attachments/assets/5e9d1763-7ea3-4114-9843-4042e7c24dff.png)
+  ![ToolDedi](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/5e9d1763-7ea3-4114-9843-4042e7c24dff)
 
 Chúc các bạn thành công :v
 
