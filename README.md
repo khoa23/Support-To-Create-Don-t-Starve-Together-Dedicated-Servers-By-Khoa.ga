@@ -2,7 +2,7 @@
 ## Hướng dẫn tạo Server Dedicated của game Don't starve together bằng tool hỗ trợ của Khoa
 (Yêu cầu hệ điều hành Windows và đã tải game Don't Starve Together trên Steam)
 ### 1. Tại Library, tải về Don't Starve Together.
-![DSTDedicatedServerSteam](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/e5381355-c07d-421d-8b61-64d10e1b8810)
+<img width="1405" height="527" alt="image" src="https://github.com/user-attachments/assets/de18a09d-206e-4f0a-bbdf-6f9e09c109f1" />
 
 ### 2. Tạo World và bật Mods
 - Vào game tạo 1 host. Chỉnh world, add caves, enabled mod, chọn chế độ... tất tần tật sau đó vào game rồi thoát ra. Nhớ chọn 'Save Type: Local Save' nhé.
@@ -16,8 +16,8 @@
 ![DSTTenServer](https://user-images.githubusercontent.com/48979664/132851255-72352254-3fdb-4a59-990a-7c51ea751c61.png)
 ![DSTTokenServer](https://user-images.githubusercontent.com/48979664/132851282-82da9a73-0b20-4404-b8b4-b0f9bffc991b.png)
 ### 4. Tải tool về
-- Các bạn tải **([Tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/refs/heads/main/Support%20to%20create%20DST%20dedicated%20server_V1.1.1.zip))** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
-![ToolDedi](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/c54667bd-6a7e-49e0-9924-1ce5a7e9a0e0)
+- Các bạn tải **[Tool này](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/raw/refs/heads/main/Support%20to%20create%20DST%20dedicated%20server_V1.1.1.zip)** về và chạy Support to create Don't Starve Together dedicated server.exe lên rồi nhập các thông số.
+<img width="1102" height="732" alt="image" src="https://github.com/user-attachments/assets/f8489eb0-f4a0-45db-a6da-3f988196d051" />
 
 (1)'BROWSER GAME' Mặc định sẽ chọn đường dẫn folder game DST bạn tải ở Steam về</br>
 (2)'SELECT CLUSTER' Bạn chọn đúng thư mục chứa save game, nếu ko biết thì coi ảnh hướng ở dưới</br>
@@ -29,7 +29,7 @@
 
 - Nếu sửa thông tin server bên phải thì bạn nhớ nhấn nút Save nhé :3 
 - Xong thì ấn LAUNCH SERVER. Tool sẽ chạy server lên.
-  ![ToolDedi](https://github.com/khoa23/Support-To-Create-Don-t-Starve-Together-Dedicated-Servers-By-Khoa.ga/assets/5e9d1763-7ea3-4114-9843-4042e7c24dff)
+<img width="1102" height="732" alt="image" src="https://github.com/user-attachments/assets/8fd1b61c-bfb8-4276-87d6-c75183b83bde" />
 
 Chúc các bạn thành công :v
 
